@@ -47,10 +47,9 @@
     padding: calc(28px + env(safe-area-inset-top, 0px)) 6.5% 28px;
     display:flex; align-items:center; justify-content:space-between;
   }
-  .logo{
-    font-family:var(--font-logo); font-weight:700; font-size:1.55rem;
-    color:var(--white); letter-spacing:.02em;
-  }
+  .logo{ display:inline-block; line-height:0; }
+  .logo img{ height:80px; width:auto; }
+  @media (max-width:720px){ .logo img{ height:60px; } }
   .nav ul{ list-style:none; display:flex; gap:1.6rem; }
   .nav a{
     color:var(--white); font-size:.82rem; font-weight:500;
@@ -214,7 +213,7 @@
 
   <!-- ===================== HEADER ===================== -->
   <header class="site-header">
-    <a href="#inicio" class="logo">cydslin</a>
+    <a href="#inicio" class="logo"><img src="img/logo-slin-blanco.png" alt="SLIN Comunicaciones y Diseños"></a>
     <nav class="nav" aria-label="Menú principal">
       <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
       <ul id="menu">
